@@ -27,7 +27,9 @@
   </div>
 
 <script>
-  const API_BASE = "http://localhost:8080";
+  //const API_BASE = "http://localhost:8080";
+  const API_BASE = "https://alb-ms93.onrender.com";
+
 
   function getCart() { return JSON.parse(localStorage.getItem("cart") || "[]"); }
   function setCart(c) { localStorage.setItem("cart", JSON.stringify(c)); }
@@ -98,3 +100,4 @@
 </script>
 </body>
 </html>
+
