@@ -18,6 +18,9 @@ public class DataSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        
+        if (repo.count() > 0) return;
+        
         // Insert demo products every time for now
         repo.save(make("Laptop", "Good for study and work", new BigDecimal("799.00"), 10,
                 "https://picsum.photos/seed/laptop/400/300"));
@@ -37,3 +40,4 @@ public class DataSeeder implements CommandLineRunner {
         return p;
     }
 }
+
